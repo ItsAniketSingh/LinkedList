@@ -48,6 +48,7 @@ public  class linkedlist {
         f.next = g;
         g.next = h;
         h.next = null;
+        
         creatNode(a, 100);
         traversal(a);
 
