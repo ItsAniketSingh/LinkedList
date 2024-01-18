@@ -22,10 +22,6 @@ The output will be the entire list after calling your function.
 
  */
 
-
-
-
-
 //  * Definition for singly-linked list.
 // public class ListNode {
 //     int val;
@@ -33,30 +29,24 @@ The output will be the entire list after calling your function.
 //     ListNode(int x) { val = x; }
 // }
 
-
-
-
 public class DeleteNodeInALinkedList {
 
     public static class ListNode {
         int val;
         ListNode next;
-        ListNode(int val){
+
+        ListNode(int val) {
             this.val = val;
         }
-        
+
     }
 
-
-
-    class Solution {
     public void deleteNode(ListNode node) {
         node.val = node.next.val;
         node.next = node.next.next;
     }
-}
+
     public static void main(String[] args) {
-        
-        
-    }    
+
+    }
 }

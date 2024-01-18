@@ -11,34 +11,36 @@
 
  */
 
-
-
 public class CycleDectation {
     public static class Node {
         int val;
         Node next;
-        Node(int val){
+
+        Node(int val) {
             this.val = val;
         }
-        
+
     }
-    public static boolean cyclicCheck(Node head){
+
+    public static boolean cyclicCheck(Node head) {
         Node slow = head;
         Node fast = head;
 
-        if(head == null){
+        if (head == null) {
             return false;
         }
-        if(head.next == null){
+        if (head.next == null) {
             return false;
         }
 
-        while (fast != null){
-            if(slow == null) return false;
+        while (fast != null) {
+            if (slow == null)
+                return false;
             slow = slow.next;
-            if(fast.next == null) return false;
+            if (fast.next == null)
+                return false;
             fast = fast.next.next;
-            if(slow == fast){
+            if (slow == fast) {
                 return true;
             }
         }
@@ -54,7 +56,7 @@ public class CycleDectation {
         Node e = new Node(9);
         Node f = new Node(10);
         Node g = new Node(11);
-        Node h = new Node (12);
+        Node h = new Node(12);
 
         a.next = b;
         b.next = c;
@@ -65,8 +67,7 @@ public class CycleDectation {
         g.next = h;
 
         h.next = b;
-        System.out.println(     cyclicCheck(a));
-   
-        
+        System.out.println(cyclicCheck(a));
+
     }
 }
