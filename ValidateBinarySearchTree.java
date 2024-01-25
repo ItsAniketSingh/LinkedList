@@ -24,7 +24,7 @@ Output: false
 Explanation: The root node's value is 5 but its right child's value is 4.
  */
 
-import javax.swing.tree.TreeNode;
+
 
 public class ValidateBinarySearchTree {
     public class TreeNode {
