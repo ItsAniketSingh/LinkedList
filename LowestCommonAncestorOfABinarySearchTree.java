@@ -24,36 +24,35 @@ Input: root = [2,1], p = 2, q = 1
 Output: 2
  */
 
-import javax.swing.tree.TreeNode;
-
 public class LowestCommonAncestorOfABinarySearchTree {
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int val){
+
+        TreeNode(int val) {
             this.val = val;
         }
-        
+
     }
-    class Solution {
-    public TreeNode LCA (TreeNode root, TreeNode p, TreeNode q){
-        if(root == null){
+
+    public TreeNode LCA(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
             return null;
         }
-        if(root.val> p.val && root.val>q.val){
-            return LCA (root.left, p, q);
-        }
-        else if(root.val < p.val && root.val<q.val){
-            return LCA(root.right,p,q);
+        if (root.val > p.val && root.val > q.val) {
+            return LCA(root.left, p, q);
+        } else if (root.val < p.val && root.val < q.val) {
+            return LCA(root.right, p, q);
         }
         return root;
     }
+
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         return LCA(root, p, q);
     }
-}
+
     public static void main(String[] args) {
-        
+
     }
 }
