@@ -1,7 +1,7 @@
 
 /**
-        Linkedlist
-
+ * Linkedlist
+ * 
  */
 class Node {
     int val;
@@ -12,16 +12,15 @@ class Node {
     }
 }
 
-
-public  class linkedlist {
-    public static void traversal (Node head){
+public class linkedlist {
+    public static void traversal(Node head) {
         while (head != null) {
-            System.out.println(" "+head.val);
-            head = head.next; 
+            System.out.println(" " + head.val);
+            head = head.next;
         }
     }
 
-    public static Node creatNode (Node ptr, int val){
+    public static Node creatNode(Node ptr, int val) {
         Node temp = new Node(val);
         Node head = ptr;
         while (ptr.next != null) {
@@ -48,10 +47,9 @@ public  class linkedlist {
         f.next = g;
         g.next = h;
         h.next = null;
-        
+
         creatNode(a, 100);
         traversal(a);
-
 
     }
 }

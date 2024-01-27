@@ -1,5 +1,5 @@
 /*
-    Given a linked list, split it into two lists such that one contaon odd values,
+    Given a linked list, split it into two lists such that one contain odd values,
     while the other contain even values.
 
 
@@ -27,7 +27,7 @@ public class SplitLLIntoOddAndEven {
         ListNode odd = head;
         ListNode even = head.next;
         ListNode startEven = even;
-        while(even != null && even.next != null && odd!=null&&odd.next!=null){
+        while(even != null && even.next != null && odd!=null && odd.next!=null){
             odd.next = even.next;
             odd = odd.next;
             even.next = odd.next;

@@ -21,7 +21,7 @@ Input: head = [2,1,3,5,6,4,7]
 Output: [2,3,6,7,1,5,4]
  */
 
-
+import java.util.List;
 
 public class OddEvenLinkedList {
     public static class ListNode {
@@ -32,7 +32,7 @@ public class OddEvenLinkedList {
 
 
 
-    public ListNode oddEvenList(ListNode head) {
+    public static ListNode oddEvenList(ListNode head) {
         if(head==null||head.next==null){
             return head;
         }
@@ -46,11 +46,39 @@ public class OddEvenLinkedList {
             even = even.next;
         }
         odd.next = startEven;
-
+        
         return head;
         
     }
+
+    public static void traversal(ListNode head) {
+        while (head != null) {
+            System.out.println(" " + head.val);
+            head = head.next;
+        }
+    }
     public static void main(String[] args) {
+        ListNode a = new ListNode(12);
+        ListNode b = new ListNode(13);
+        ListNode c = new ListNode(14);
+        ListNode d = new ListNode(15);
+        ListNode e = new ListNode(16);
+        ListNode f = new ListNode(17);
+        ListNode g = new ListNode(18);
+        ListNode h = new ListNode(19);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        e.next = f;
+        f.next = g;
+        g.next = h;
+        h.next = null;
+
+        traversal(a);
+        System.out.println();
+        traversal(oddEvenList(a));
+        
         
     }
     
