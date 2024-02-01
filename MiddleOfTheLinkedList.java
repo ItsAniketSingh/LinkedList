@@ -21,6 +21,8 @@ Explanation: The middle node of the list is node 3.
 
 
  public class MiddleOfTheLinkedList {
+
+    
     public static class Node {
     
         int val;
