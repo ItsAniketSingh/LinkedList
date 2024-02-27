@@ -3,7 +3,6 @@
 
  */
 
-
 public class FindOutWhereCycleBegins {
 
     public static class Node {
