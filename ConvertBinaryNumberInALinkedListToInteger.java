@@ -9,6 +9,10 @@ Input: head = [1,0,1]
 Output: 5
 Explanation: (101) in base 2 = (5) in base 10
 
+
+
+
+
 Example 2:
 Input: head = [0]
 Output: 0
